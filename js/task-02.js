@@ -6,17 +6,17 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const RefUl = document.querySelector('#ingredients');
+const refUl = document.querySelector('#ingredients');
 
 const newArr = [];
 for (const ingredient of ingredients) {
-  const Elli = document.createElement('li');
-  Elli.classList.add("item");
-  Elli.textContent = ingredient;
-  newArr.push(Elli);
+  const elli = document.createElement('li');
+  elli.classList.add("item");
+  elli.textContent = ingredient;
+  newArr.push(elli);
   
 }
-RefUl.append(...newArr);
+refUl.append(...newArr);
 console.log(newArr);
 //
 /*const createliEl = options => {

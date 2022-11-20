@@ -1,9 +1,9 @@
 
 const form = document.querySelector(".login-form");
 
-form.addEventListener('submit',CheckField);
+form.addEventListener('submit',checkField);
 
-function CheckField(event) {
+function checkField(event) {
     event.preventDefault();
     const formElem = event.currentTarget.elements;
     const email = formElem.email.value;
@@ -12,6 +12,10 @@ function CheckField(event) {
         alert("Fill all fields, please");
         return;
     }
-   
+    const formInfo = {
+        email,
+        passwordelem,
+    };
+    console.log(formInfo);
     form.reset();
 }

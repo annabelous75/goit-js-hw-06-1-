@@ -1,5 +1,5 @@
-const Counterfunction = function ({ rootSelector, CounterValue = 0, step = 1 } = {}) {
-    this.CounterValue = CounterValue;
+const Counterfunction = function ({ rootSelector, counterValue = 0, step = 1 } = {}) {
+    this.counterValue = counterValue;
     this.step = step;
     this.refs = this.getRef(rootSelector);
     this.events();
@@ -25,12 +25,12 @@ Counterfunction.prototype.events = function () {
     });
 };
 Counterfunction.prototype.uiupdate = function () {
-    this.refs.CounterValue.textContent = this.CounterValue;
+    this.refs.counterValue.textContent = this.counterValue;
 };
 Counterfunction.prototype.increment = function () {
-    this.CounterValue += this.step;
+    this.counterValue += this.step;
 };
 Counterfunction.prototype.decrement = function () {
-    this.CounterValue -= this.step;
+    this.counterValue -= this.step;
 };
 new Counterfunction({ rootSelector: '#counter', step: 1 });
